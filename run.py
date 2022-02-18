@@ -18,3 +18,9 @@ from user import user
         Function to delete a user
         '''
         user.delete_user()
+
+    def find_user(username):
+        '''
+        Function that finds a user by username and returns the user details
+        '''
+        return user.find_by_username(username)
