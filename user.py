@@ -35,17 +35,17 @@ class user:
 
             user.user_list.remove(self)
 
-    @classmethod
-    def find_by_username(cls,username):
-        '''
-        Method that takes in a username and returns a user that matches that username.
+        @classmethod
+        def find_by_username(cls,username):
+            '''
+            Method that takes in a username and returns a user that matches that username.
 
-        Args:
-            username: username to search for
-        Returns :
-            user details of person that matches the username.
-        '''
+            Args:
+                username: username to search for
+            Returns :
+                user details of person that matches the username.
+            '''
 
-        for user in cls.user_list:
-            if user.username == username:
-                return user
+            for user in cls.user_list:
+                if user.username == username:
+                 return user
