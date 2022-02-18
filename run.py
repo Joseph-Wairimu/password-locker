@@ -12,3 +12,9 @@ from user import user
         Function to save users
         '''
         user.save_user()
+
+    def del_user(user):
+        '''
+        Function to delete a user
+        '''
+        user.delete_user()
