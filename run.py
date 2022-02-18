@@ -24,3 +24,9 @@ from user import user
         Function that finds a user by username and returns the user details
         '''
         return user.find_by_username(username)
+
+    def check_existing_users(username):
+        '''
+        Function that check if a user exists with that username and return a Boolean
+        '''
+        return user.user_exist(username)
