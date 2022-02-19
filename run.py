@@ -51,7 +51,7 @@ def save_credentials(credentials):
     '''
     save credentials 
     '''
-    credentials.save_credentials(credentials)
+    credentials.save_credentials()
 
 def delete_credentials(account) :
     """
@@ -110,9 +110,23 @@ def main():
                     if check_existing_users(username,password):
                         print("Logged in successfully")
                         while True:
-                            print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials,ex- exit")
+                            print("Use the following short codes to check your credentials:gc -generate credentials,sc- save credentials,dp- display credentials,ex- exit")
 
                             short_code = input().lower()
+                            if short_code == "gc":
+                                        print ("Account name:")
+                                        account = input()
+                                        print("Username:")
+                                        username = input()
+                                        print ("Password:")
+                                        password = input()
+                                        save_credentials(create_credentials(account,username,password))
+                                        print(f"Your {account} account details have been saved successfully.")
+                                        print("-"*40)
+
+
+
+
 
 
 
