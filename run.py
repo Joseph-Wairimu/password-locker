@@ -30,3 +30,11 @@ from user import user
         Function that check if a user exists with that username and return a Boolean
         '''
         return user.user_exist(username)
+
+    def display_users():
+        '''
+        Function that returns all the saved users
+        '''
+        return user.display_users()
+       
+    def main():
