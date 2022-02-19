@@ -44,7 +44,10 @@ def main():
         print(f"Hello {user_name}. what would you like to do?")
         print('\n')
 
-        
+        while True:
+             print("Use these short codes : cu - create a new user, du - display users, fu -find a user, ex -exit the user list ")
+
+                    short_code = input().lower()
 
 
 
