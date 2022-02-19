@@ -113,7 +113,7 @@ def main():
                             print("Use the following short codes to check your credentials:gc -generate credentials,sc- save credentials,dp- display credentials,ex- exit")
                             print('*'*70)
                             short_code = input().lower()
-                            if short_code == "gc":
+                            if short_code == "sc":
                                         print ("Account name:")
                                         account = input()
                                         print("Username:")
@@ -136,7 +136,16 @@ def main():
                             elif short_code=="ex":
                                         print("You have successfully been logged out!bye")
                                         break        
+                                     
+                            elif short_code =="gc":
+                                        print("User")
+                                        print("*"*20)
 
+                                        print ("Username:")
+                                        username = input()
+                                        
+                                        print ("Account:")
+                                        account = input()
 
 
 
