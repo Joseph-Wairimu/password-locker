@@ -78,39 +78,39 @@ def find_by_acc(account):
 
     
 def main():
-        # print("Hello Welcome to your user list. What is your name?")
-        # user_name = input()
+        print("Hello Welcome to your user list. What is your name?")
+        user_name = input()
 
-        # print(f"Hello {user_name}. what would you like to do?")
-        # print('\n')
+        print(f"Hello {user_name}. what would you like to do?")
+        print('\n')
 
-        # while True:
-        #     print("Use these short codes : cu - create a new user, du - display users, fu -find a user, log - to login to your account, ex -exit the user list ")
+        while True:
+            print("Use these short codes : cu - create a new user, du - display users, fu -find a user, log - to login to your account, ex -exit the user list ")
 
-        #     short_code = input().lower()
-        #     if short_code == 'cu':
-        #             print("Create New User Account")
-        #             print('*'*70)
-        #             print("Enter your first name .....")
-        #             first_name = input()
-        #             print("Enter your last name .....")
-        #             second_name = input()
-        #             print("Enter your username .....")
-        #             username = input()
-        #             print("Enter password .....")
-        #             password = input()
-        #             save_users(create_user(first_name, second_name,username, password))
-        #             print('*'*70)
-        #             print(f"Hello {first_name}. Account created successfully. Proceed to login to access your account")
-        #             print('*'*70)
-        #     elif short_code == 'log' or short_code == 'du':
-        #             print('*'*70)
-        #             print("Enter your username ...")
-        #             username = input()
-        #             print("Enter your password ...")
-        #             password = input()
-        #             if check_existing_users(username,password):
-        #                 print("Logged in successfully")
+            short_code = input().lower()
+            if short_code == 'cu':
+                    print("Create New User Account")
+                    print('*'*70)
+                    print("Enter your first name .....")
+                    first_name = input()
+                    print("Enter your last name .....")
+                    second_name = input()
+                    print("Enter your username .....")
+                    username = input()
+                    print("Enter password .....")
+                    password = input()
+                    save_users(create_user(first_name, second_name,username, password))
+                    print('*'*70)
+                    print(f"Hello {first_name}. Account created successfully. Proceed to login to access your account")
+                    print('*'*70)
+            elif short_code == 'log' or short_code == 'du':
+                    print('*'*70)
+                    print("Enter your username ...")
+                    username = input()
+                    print("Enter your password ...")
+                    password = input()
+                    if check_existing_users(username,password):
+                        print("Logged in successfully")
                         while True:
                             print("Use the following short codes to check your credentials:gc -generate credentials,sc- save credentials,dp- display credentials,ex- exit")
                             print('*'*70)
@@ -157,8 +157,8 @@ def main():
                                                 password =input()
 
                                             elif random_password =="rp":    
-                                                 print("Random password")
                                                  length = int(input('\nEnter the length of password: '))
+                                                 print('*'*20)
                                                  lower = string.ascii_lowercase
                                                  upper = string.ascii_uppercase
                                                  num = string.digits
@@ -166,13 +166,26 @@ def main():
                                                  all = lower + upper + num + symbols  
                                                  temp = random.sample(all,length)
                                                  password = "".join(temp)               
-                                                #  all = string.ascii_letters + string.digits + string.punctuation
-                                                #  pass = "".join(random.sample(all,length))
                                                  print(f"Password has been generated successfully. Your password is{password}")
 
+                                            break        
+                                                 
+                            save_credentials(create_credentials(account,username,password))
+                            print('*'*20)
+                    else:
+                          print("please make use of the shortcodes provided.") 
 
-
-
+            elif short_code == "ex":
+                      print('*'*70)
+                      print ("Thank you for interacting with our application!Bye we appreciate...")
+                      break
+                            
+            else:
+                      print('*'*70)
+                      print("Invalid short codes.Try again!")
+                      print('*'*70)
+  
+                            
 
 
 
