@@ -33,10 +33,22 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(len(credentials.credentials_list),1)
         self.new_credentials.delete_credentials() 
 
+    def tearDown(self): 
+        """
+        clears up after every test is done
+        """ 
+        credentials.credentials_list=[] 
 
 
-
-
+    def  test_find_by_account(self): 
+        """
+        tests whether a user can find account using account name
+        """
+        self.new_credentials.save_credentials()
+        test_credentials = credentials("twitter","kamore44","kamore44") # new credentials 
+        test_credentials.save_credentials() 
+        
+        found_credentials=credentials.find_by_acc("account")
 
 
 
