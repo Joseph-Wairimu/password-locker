@@ -47,7 +47,11 @@ def create_credentials(account,username,password):
     new_credentials = credentials(account,username,password)
     return new_credentials
 
-
+def save_credentials(credentials):
+    '''
+    save credentials 
+    '''
+    credentials.save_credentials(credentials)
 
 
 
