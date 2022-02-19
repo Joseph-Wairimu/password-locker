@@ -45,10 +45,25 @@ def main():
         print('\n')
 
         while True:
-             print("Use these short codes : cu - create a new user, du - display users, fu -find a user, ex -exit the user list ")
+            print("Use these short codes : cu - create a new user, du - display users, fu -find a user, log - to login to your account, ex -exit the user list ")
 
-                    short_code = input().lower()
-
+            short_code = input().lower()
+            if short_code == 'cu':
+                    print("Create New User Account")
+                    print('*'*40)
+                    print("Enter your first name .....")
+                    first_name = input()
+                    print("Enter your last name .....")
+                    second_name = input()
+                    print("Enter your username .....")
+                    username = input()
+                    print("Enter password .....")
+                    password = input()
+                    save_users(create_user(first_name, second_name,username, password))
+                    print('*'*40)
+                    print(f"Hello {first_name}. Account created successfully. Proceed to login to access your account")
+                    print('*'*50)
+            elif short_code == 'log' or short_code == 'du':
 
 
 
