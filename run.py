@@ -66,6 +66,12 @@ def display_credentials():
     return credentials.display_credentials()
 
 
+def find_by_acc(account):
+    """
+    find for an account
+    """
+    return credentials.find_by_acc(account)
+
 
 
     
