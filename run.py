@@ -111,7 +111,7 @@ def main():
         #                 print("Logged in successfully")
                         while True:
                             print("Use the following short codes to check your credentials:gc -generate credentials,sc- save credentials,dp- display credentials,ex- exit")
-
+                            print('*'*70)
                             short_code = input().lower()
                             if short_code == "gc":
                                         print ("Account name:")
@@ -127,12 +127,15 @@ def main():
                             elif short_code == "dp":
                                         if display_credentials():
                                            print("A list of your credentials below:")
+                                           print('*'*70)
                                            for display in display_credentials():
                                             print(f"Account:{display.account} \n Username:{display.username} \n Password:{display.password}")
                                         else:
                                             print("Your credentials are not available")
                                             print("-"*20)
-
+                            elif short_code=="ex":
+                                        print("You have successfully been logged out!bye")
+                                        break        
 
 
 
