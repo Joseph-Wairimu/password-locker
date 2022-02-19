@@ -76,39 +76,39 @@ def find_by_acc(account):
 
     
 def main():
-        print("Hello Welcome to your user list. What is your name?")
-        user_name = input()
+        # print("Hello Welcome to your user list. What is your name?")
+        # user_name = input()
 
-        print(f"Hello {user_name}. what would you like to do?")
-        print('\n')
+        # print(f"Hello {user_name}. what would you like to do?")
+        # print('\n')
 
-        while True:
-            print("Use these short codes : cu - create a new user, du - display users, fu -find a user, log - to login to your account, ex -exit the user list ")
+        # while True:
+        #     print("Use these short codes : cu - create a new user, du - display users, fu -find a user, log - to login to your account, ex -exit the user list ")
 
-            short_code = input().lower()
-            if short_code == 'cu':
-                    print("Create New User Account")
-                    print('*'*70)
-                    print("Enter your first name .....")
-                    first_name = input()
-                    print("Enter your last name .....")
-                    second_name = input()
-                    print("Enter your username .....")
-                    username = input()
-                    print("Enter password .....")
-                    password = input()
-                    save_users(create_user(first_name, second_name,username, password))
-                    print('*'*70)
-                    print(f"Hello {first_name}. Account created successfully. Proceed to login to access your account")
-                    print('*'*70)
-            elif short_code == 'log' or short_code == 'du':
-                    print('*'*70)
-                    print("Enter your username ...")
-                    username = input()
-                    print("Enter your password ...")
-                    password = input()
-                    if check_existing_users(username,password):
-                        print("Logged in successfully")
+        #     short_code = input().lower()
+        #     if short_code == 'cu':
+        #             print("Create New User Account")
+        #             print('*'*70)
+        #             print("Enter your first name .....")
+        #             first_name = input()
+        #             print("Enter your last name .....")
+        #             second_name = input()
+        #             print("Enter your username .....")
+        #             username = input()
+        #             print("Enter password .....")
+        #             password = input()
+        #             save_users(create_user(first_name, second_name,username, password))
+        #             print('*'*70)
+        #             print(f"Hello {first_name}. Account created successfully. Proceed to login to access your account")
+        #             print('*'*70)
+        #     elif short_code == 'log' or short_code == 'du':
+        #             print('*'*70)
+        #             print("Enter your username ...")
+        #             username = input()
+        #             print("Enter your password ...")
+        #             password = input()
+        #             if check_existing_users(username,password):
+        #                 print("Logged in successfully")
                         while True:
                             print("Use the following short codes to check your credentials:gc -generate credentials,sc- save credentials,dp- display credentials,ex- exit")
 
@@ -124,6 +124,14 @@ def main():
                                         print(f"Your {account} account details have been saved successfully.")
                                         print("-"*40)
 
+                            elif short_code == "dp":
+                                        if display_credentials():
+                                           print("A list of your credentials below:")
+                                           for display in display_credentials():
+                                            print(f"Account:{display.account} \n Username:{display.username} \n Password:{display.password}")
+                                        else:
+                                            print("Your credentials are not available")
+                                            print("-"*20)
 
 
 
