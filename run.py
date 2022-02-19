@@ -59,6 +59,11 @@ def delete_credentials(account) :
     """ 
     return credentials.delete_credentials(account)  
 
+def display_credentials():
+    """
+    display credentials
+    """
+    return credentials.display_credentials()
 
 
 
