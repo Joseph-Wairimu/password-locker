@@ -1,6 +1,7 @@
 from user import user
 from  credentials import  credentials
 import random
+import string
 #user details
 
 def create_user(first_name,second_name,username,password):
@@ -148,9 +149,26 @@ def main():
                                         print ("Account:")
                                         account = input()
 
+                                        while True:
+                                            print("use short code cp- create password, allow us to generate a password for you,rp-random password")
+                                            random_password = input().lower()
+                                            if random_password =="cp":
+                                                print("Create your password")
+                                                password =input()
 
-
-
+                                            elif random =="rp":    
+                                                 print("Random password")
+                                                 length = int(input('\nEnter the length of password: '))
+                                                 lower = string.ascii_lowercase
+                                                 upper = string.ascii_uppercase
+                                                 num = string.digits
+                                                 symbols = string.punctuation
+                                                 all = lower + upper + num + symbols  
+                                                 temp = random.sample(all,length)
+                                                 password = "".join(temp)               
+                                                 all = string.ascii_letters + string.digits + string.punctuation
+                                                 pass = "".join(random.sample(all,length))
+                                                 print(f"Password has been generated successfully. Your password is{password})
 
 
 
