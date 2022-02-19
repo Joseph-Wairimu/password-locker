@@ -1,5 +1,5 @@
-import unittest
-from credentials import credentials #from credentials import class credentials
+import unittest # Importing the unittest module
+from  credentials import  credentials#from credentials import class credentials
 
 class TestCredentials(unittest.TestCase):
     def setUp(self):
@@ -15,6 +15,14 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.account,"twitter")
         self.assertEqual(self.new_credentials.username,"kamore44") 
         self.assertEqual(self.new_credentials.password,"kamore44") 
+   
+    def test_save_credentials(self):
+        """
+        test whether credentials are saved in the credentials_list
+        """ 
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(credentials.credentials_list),1)
+
 
     def  test_delete_credentials(self):
         """
@@ -24,4 +32,16 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.save_credentials()
         self.assertEqual(len(credentials.credentials_list),1)
         self.new_credentials.delete_credentials() 
+
+
+
+
+
+
+
+
+
+                
+if __name__ == '__main__':
+    unittest.main()    
         
