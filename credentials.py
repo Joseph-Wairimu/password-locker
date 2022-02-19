@@ -1,4 +1,4 @@
-class Credentials:
+class credentials:
     
     """
     Class that creates new instance for credentials
