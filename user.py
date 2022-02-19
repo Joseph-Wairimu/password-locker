@@ -53,19 +53,18 @@ class user:
 
 
         @classmethod
-        def user_exist(cls,username):
+        def user_exist(cls,username,password):
             '''
-            Method that checks if a user exists from the user list.
+            Method that checks if a user exists from the user list and confirm password.
             Args:
                 username: username to search if it exists
             Returns :
                 Boolean: True or false depending if the user exists
             '''
-            for user in cls.user_list:
-                if user.username == username:
+            user = cls.find_by_username(username)
+            if user and user.password == password:
                         return True
-
-            return False  
+            return False     
 
         @classmethod
         def display_users(cls):

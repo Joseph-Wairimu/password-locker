@@ -25,11 +25,11 @@ def find_user(username):
     '''
     return user.find_by_username(username)
 
-def check_existing_users(username):
+def check_existing_users(username,password):
     '''
     Function that check if a user exists with that username and return a Boolean
     '''
-    return user.user_exist(username)
+    return user.user_exist(username,password)
 
 def display_users():
     '''
@@ -50,7 +50,7 @@ def main():
             short_code = input().lower()
             if short_code == 'cu':
                     print("Create New User Account")
-                    print('*'*40)
+                    print('*'*70)
                     print("Enter your first name .....")
                     first_name = input()
                     print("Enter your last name .....")
@@ -60,11 +60,17 @@ def main():
                     print("Enter password .....")
                     password = input()
                     save_users(create_user(first_name, second_name,username, password))
-                    print('*'*40)
+                    print('*'*70)
                     print(f"Hello {first_name}. Account created successfully. Proceed to login to access your account")
-                    print('*'*50)
+                    print('*'*70)
             elif short_code == 'log' or short_code == 'du':
-
+                    print('*'*70)
+                    print("Enter your username ...")
+                    username = input()
+                    print("Enter your password ...")
+                    password = input()
+                    if check_existing_users(username,password):
+                        print("Logged in successfully")
 
 
 
