@@ -1,4 +1,6 @@
 from user import user
+from  credentials import  credentials
+#user details
 
 def create_user(first_name,second_name,username,password):
     '''
@@ -33,9 +35,24 @@ def check_existing_users(username,password):
 
 def display_users():
     '''
-    Function that returns all the saved users
+    returns all the saved users
     '''
     return user.display_users()
+
+#Credentials details
+def create_credentials(account,username,password):
+    '''
+     creates  new credentials
+    '''
+    new_credentials = credentials(account,username,password)
+    return new_credentials
+
+
+
+
+
+
+
     
 def main():
         print("Hello Welcome to your user list. What is your name?")
@@ -71,8 +88,10 @@ def main():
                     password = input()
                     if check_existing_users(username,password):
                         print("Logged in successfully")
+                        while True:
+                            print("Use the following short codes to check your credentials:cc -create credentials,sc- store credentials,dip- display credentials,ex- exit")
 
-
+                            short_code = input().lower()
 
 
 
