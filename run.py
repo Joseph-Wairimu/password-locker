@@ -156,7 +156,7 @@ def main():
                                                 print("Create your password")
                                                 password =input()
 
-                                            elif random =="rp":    
+                                            elif random_password =="rp":    
                                                  print("Random password")
                                                  length = int(input('\nEnter the length of password: '))
                                                  lower = string.ascii_lowercase
@@ -166,9 +166,9 @@ def main():
                                                  all = lower + upper + num + symbols  
                                                  temp = random.sample(all,length)
                                                  password = "".join(temp)               
-                                                 all = string.ascii_letters + string.digits + string.punctuation
-                                                 pass = "".join(random.sample(all,length))
-                                                 print(f"Password has been generated successfully. Your password is{password})
+                                                #  all = string.ascii_letters + string.digits + string.punctuation
+                                                #  pass = "".join(random.sample(all,length))
+                                                 print(f"Password has been generated successfully. Your password is{password}")
 
 
 
