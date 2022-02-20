@@ -21,7 +21,7 @@ chmod +x run.py
 Python3.7
 
 ## Product Management
-Planning and development is iterative because I am constantly coding and improving my website as I learn new skills allowing me to make new changes and make the site more responsive.
+Planning and development is iterative because I am constantly coding and improving my application as I learn new skills allowing me to make new changes and make the site more responsive.
 
 
 ## Support and contact details
